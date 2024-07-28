@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Cell</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="NavButton.css">
+    <link rel="stylesheet" href="ESButton.css">
+</head>
+<body>
+    <header class="HeaderMain">
+        <div class="Cont">
+            <div class="Logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+        <div class="ButtonBox">
+            <button class="NavButton">About Us</button>
+            <button class="NavButton">Mission</button>
+            <button class="NavButton">Highlights</button>
+            <button class="NavButton">Gallery</button>
+            <button class="NavButton">Contact Us</button>
+        </div>
+        </div>
+    </header>
+    <div class="VideoContainer shadow-2xl">
+        <p class="hidden TextButton">Join Our Latest Event</p>
+        <div class="VideoHolder">
+            <video src="img/Video.mp4" autoplay="" loop="" muted=""></video>
+        </div>
+        <div class="ESButtonContainer">
+        <button class="ESButton hidden">
+            <strong>E-SUMMIT</strong>
+            <div id="container-stars">
+                <div id="stars"></div>
+            </div>
+            <div id="glow">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        </button>
+    </div>
+
+    <div class="Data">
+        <div id="AboutUs" class="AboutUsHeader" >
+            <h2>About Us</h2>
+            <p>“Where Global Problems Meet Global Solution”</p>
+        </div>
+        <div class="Container shadow-inner hidden">
+            <div class="AboutUs">
+                <img src="img/AboutUs.jpeg" alt="AboutUs" class="shadow-2xl hiddenAnimationRight Image">
+            </div>
+            <div class="TextData TextDataRight hiddenAnimationRight">
+                <p>The International Cell at the Department of Psychology, Christ (Deemed to be University), Delhi NCR, fosters global connections and enhances the academic and cultural environment for psychology students. We create international collaborations and networking opportunities, integrating cutting-edge research with practical applications. Our focus on cultural competence and global perspectives prepares students to become leaders and innovators in psychology.</p>
+            </div>
+        </div>
+        <div class="Container shadow-inner hidden">
+            <div id="Mission">
+                <img src="img/Mission.jpg" alt="Mission" class="shadow-2xl hiddenAnimationLeft Image">
+            </div>
+            <div class="TextData TextDataLeft hiddenAnimationLeft" >
+                <h2>Mission</h2>
+                <p>• Enhance academic rigor </p>
+                <p>• Work towards inclusive leadership</p>
+                <p>• Promote cultural diversity on campus</p>
+                <p>• Advance cultural sensitivity in psychological practices</p>
+                <p>• Develop cross-cultural competency workshops</p>
+                <p>• Make a global impact on individuals and our campus</p>
+            </div>
+        </div>
+        <div class="Container shadow-inner hidden">
+            <div id="Vision">
+                <img src="img/Vision.jpg" alt="Vision" class="shadow-lg hiddenAnimationRight Image">
+            </div>
+            <div class="TextData TextDataRight hiddenAnimationRight">
+                <h2>Vision</h2>
+                <p>• Organize guest talks by renowned experts in psychology</p>
+                <p>• Implement an immersion program to experience psychological practices in diverse settings</p>
+                <p>• Invite international psychology scholars in residence</p>
+                <p>• Promote cross-cultural understanding</p>
+            </div>
+        </div>
+    </div>
+    <div class="HighlightsContainer" id="Highlights">
+        <h2>Highlights</h2>
+        <div class="Highlights1Container">
+            <div class="Highlights1">
+                <video src="img/Highlight1.mov" autoplay="" loop="false"></video>
+                <div class="Highlights1TextData">
+                    <p>*Here Goes the Transcript or whatever*</p>
+                </div>
+            </div>
+            <div class="Highlights2Container">
+                <div class="Container shadow-inner hidden ">
+                    <img src="img/Humanistic_Psychodrama.jpg" class="Image">
+                    <div class="TextData TextDataLeft">
+                        <p>Humanistic Psychodrama</p>
+                    </div>
+                </div>
+                <div class="Container shadow-inner hidden">
+                    <img src="img/Marta.jpg" class="Image">
+                    <div class="TextData TextDataRight" >
+                        <p>Marta Malini</p>
+                    </div>
+                </div>
+                <div class="Container shadow-inner hidden">
+                    <img src="img/Priyanka.jpeg" class="Image">
+                    <div class="TextData TextDataLeft">
+                        <p>GIP Priyanka</p>
+                    </div>
+                </div>
+                <div class="Container shadow-inner hidden">
+                    <img src="img/harleen.jpeg" class="Image">
+                    <div class="TextData TextDataRight">
+                        <p>Harleen Kaur</p>
+                    </div>
+                </div>
+                <div class="Container shadow-inner hidden">
+                    <img src="img/Nikita.jpeg" class="Image">
+                    <div class="TextData TextDataLeft">
+                        <p>Nikita Maam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="scripts.js"></script>
+</body></html>

@@ -1,0 +1,341 @@
+body,html {
+	--BG-col:#fff;
+    --Header-Col:#edede9;
+    --Header-Height:170px;
+    --Data-Colour:#e1e0da;
+    --Info-Colour:#cfcec7;
+    --Text-Padding:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    margin-right:1%;
+    margin-left:1%;
+    height:fit-content;
+}
+
+.hidden {
+    opacity:0;
+}
+
+.hiddenAnimationLeft{
+	opacity:0;
+	filter:blur(5px);
+	transform:translateX(-100%);
+	transition: all 1s ease;
+}
+
+.hiddenAnimationRight{
+	opacity:0;
+	filter:blur(5px);
+	transform:translateX(100%);
+	transition: all 1s ease;
+}
+
+
+.header {
+    position:absolute;
+    color:#edede9;
+    display:flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.Cont {
+    background-color:var(--Header-Col);
+    position:fixed;
+    border-radius: 15px;
+    padding: 5px 10px 2px 10px;
+    height:var(--Header-Height);
+    z-index: 10;
+    transition: all 0.5s ease;
+    margin-top: 6px;
+	width:96%;
+}
+
+
+.Logo img {
+    position:relative;
+    top:45px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height:100px;
+    width:100px;
+    transition: all 0.5s ease;
+}
+
+.LogoSide img {
+    position:relative;
+    top:45px;
+    left:40px;
+    transform: translate(-50%,-50%);
+    height:80px;
+    width:80px;
+    transition: all 0.5s ease;   
+}
+
+.ButtonBox{
+    z-index:11;
+    display:flex;
+    background-color: #000000;
+    overflow: auto;
+    scrollbar-width:none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 135px;
+    left:3%;
+    transform: translate(-0%, -50%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    width: 94%;
+    transition: all 0.5s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-wrap:nowrap;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease;  
+}
+
+.ButtonBoxAlt {
+    z-index:11;
+    display:flex;
+    background-color: #000000;
+    overflow-x:auto;
+    scrollbar-width:none;
+    border-radius: 7px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50px;
+    left:calc(100vw - 630px);
+    transform: translate(0%, -50%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease;
+    width:550px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-wrap:nowrap;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease;  
+}
+
+.VideoContainer {
+	width: 100%;
+	height: calc(calc(100vh - var(--Header-Height)) - 18px);
+	overflow: hidden;
+	display:grid;
+	grid-template-rows: 1fr 3rem 40px;
+	grid-template-columns: 1fr 13rem 40px;
+	background: var(--BG-col);
+	border-radius: 15px;
+	margin-bottom: 5px;
+	margin-top:calc(var(--Header-Height) + 6px);
+    transition: all 0.5s ease;  
+}
+
+.VideoHolder {
+	grid-area: 1 / 1 / 4 / 4;
+	display:flex;
+	height:100%;
+	width:100%;
+}
+
+.VideoContainer video {
+    display:flex;
+	object-fit: cover;
+	position: relative;
+	top:200px;
+	height:1px;
+	width:100%;
+	transition: all 0.5s ease; 
+}
+
+.ESButtonContainer{
+	grid-area: 2 / 2 / 3 / 3 ;
+}
+
+.VideoContainer p {
+	display:flex;
+	grid-area:1 / 2 / 2 / 3;
+	z-index:2;
+	color:#fff;
+	flex-wrap:wrap;
+	align-content: end;
+	font-size:26px;
+    transition: all 0.5s ease; 
+}
+
+
+.Data {
+	display:flex;
+	background-color:var(--Data-Colour);
+	border-radius: 15px;    
+	flex-direction:column;
+	overflow-x: hidden;
+	height:fit-content;
+	padding-bottom:5px;
+
+}
+.Data h2{
+	font-size:32px;
+	text-align:center;
+	font-weight: bolder;
+}
+.Data p {
+	font-size:20px;
+	font-style:normal;
+	display: flex;
+	flex:warp;
+	text-wrap:pretty;
+	max-width:100%;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+.AboutUsHeader{
+		display:grid;
+		text-align:center;
+		justify-content:center;
+	}
+.AboutUsHeader h2{
+		font-size:45px;
+		justify-content:center;
+		font-weight: bolder;
+	}
+	
+.AboutUsHeader p {
+		font-size:22px;
+		justify-content:center;
+		font-style:italic;
+	}
+
+.Container {
+	display:grid;
+	margin-right:1.5%;
+	margin-left:1.5%;
+	grid-template-rows:auto;
+	grid-template-columns:1fr 1fr;
+	grid-template-areas:'Image Content';
+	background-color:var(--Info-Colour);
+	border-radius: 15px;
+	padding:15px;
+	overflow-x: hidden;
+	margin:4px;
+    transition: all 0.5s ease;  
+}
+
+#Mission , #Vision , .AboutUs {
+	display:flex;
+	justify-content:center;
+	overflow-x: hidden;
+}
+
+.Container img {
+		object-fit:contain;
+		object-position: center;
+		border-radius: 15px;
+		overflow-x: hidden;
+		transition-delay:400ms;
+		transition: all 1s ease;
+}
+
+.TextDataLeft , .TextDataRight {
+		padding:10px;
+		display:flex;
+		flex-direction:column;
+		text-align:start;
+		justify-content: start;
+		overflow-x: hidden;
+		transition: all 1s ease;
+}
+
+.TextDataLeft{
+	grid-area:1 / 1 / 2 / 2;
+}
+
+.HighlightsContainer {
+	display:grid;
+	background-color:var(--Data-Colour);
+	height:var(--Info-Height);
+	border-radius: 15px;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	align-content:center;
+	justify-content:center;
+}
+
+.HighlightsContainer h2{
+	font-size:44px;
+	align-self:center;
+	font-weight: bolder;
+}
+
+.HighlightsContainer p{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	font-size:22px;
+	font-weight: bolder;
+	justify-content:center;
+	align-content:center;
+	text-align: center;
+}
+
+.Highlights1 {
+	display:grid;
+	margin-right:20%;
+	margin-left:20%;
+	grid-template-rows:auto;
+	grid-template-columns:1fr 1fr;
+	background-color:var(--Info-Colour);
+	border-radius: 15px;
+	padding:15px;
+
+}
+
+
+.Highlights1 video {
+	height:400px;
+	justify-self:center;
+	border-radius:15px;
+	object-fit: cover;
+}
+
+.Highlights1TextData {
+	display:flex;
+	text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .ButtonBox{
+		padding-left:200px;
+	}
+	.ButtonBoxAlt {
+    z-index:11;
+    display:flex;
+    background-color: #000000;
+    overflow-x:auto;
+    scrollbar-width:none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    position: absolute;
+    top:calc(100vh - 50px);
+    left:50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    width:94%;
+    transition: all 0.5s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-wrap:nowrap;
+    flex-wrap: nowrap;
+	padding-left:200px;
+    transition: all 0.5s ease;  
+    }
+}
