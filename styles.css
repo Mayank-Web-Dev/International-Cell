@@ -338,4 +338,13 @@ body,html {
 	padding-left:200px;
     transition: all 0.5s ease;  
     }
+	.Container{
+	grid-template-rows:auto;
+	grid-template-columns:1fr;
+	grid-template-areas:'Image'
+	"Content";
+	}
+	.TextDataRight{
+		grid-area:1 / 1 / 2 / 2;
+	}
 }
