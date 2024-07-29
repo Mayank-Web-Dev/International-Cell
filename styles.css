@@ -78,7 +78,7 @@ body,html {
 .ButtonBox{
     z-index:11;
     display:flex;
-    background-color: #1650a8;
+    background-color: #1650a8    ;
     overflow: auto;
     scrollbar-width:none;
     border-radius: 7px;
@@ -109,11 +109,11 @@ body,html {
     padding: 2px 5px;
     position: absolute;
     top: 50px;
-    left:calc(100vw - 630px);
+    left:calc(100vw - 640px);
     transform: translate(0%, -50%);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
     transition: all 0.5s ease;
-    width:550px;
+    width:560px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -234,13 +234,14 @@ body,html {
 	overflow-x: hidden;
 }
 
-.Container img {
+.Container img, video {
 		object-fit:contain;
 		object-position: center;
 		border-radius: 15px;
 		overflow-x: hidden;
 		transition-delay:400ms;
 		transition: all 1s ease;
+		justify-self: center;
 }
 
 .TextDataLeft , .TextDataRight {
@@ -280,7 +281,6 @@ body,html {
 	flex-wrap:wrap;
 	flex-direction:column;
 	font-size:22px;
-	font-weight: bolder;
 	justify-content:center;
 	align-content:center;
 	text-align: center;
