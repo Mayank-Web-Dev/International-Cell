@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body,html {
 	--BG-col:#d2b7f3;
     --Header-Col:#edede9;
@@ -13,6 +16,13 @@ body,html {
     margin-right:1%;
     margin-left:1%;
     height:fit-content;
+}
+
+body,html h2 {
+    font-family: "DM Serif Display", serif;
+}
+body,html p {
+    font-family: "Playfair Display", serif;
 }
 
 .hidden {
@@ -165,8 +175,9 @@ body,html {
 	color:#fff;
 	flex-wrap:wrap;
 	align-content: end;
-	font-size:26px;
-    transition: all 0.5s ease; 
+	font-size: 21px;
+	transition: all 0.5s ease;
+	color: #9619e8;
 }
 
 
