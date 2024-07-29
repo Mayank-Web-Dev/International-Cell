@@ -8,7 +8,7 @@ function sleep(ms) {
 }
 
 function ImageSize(){
-for (let i = 0; i <= 7; i++) {
+for (let i = 0; i <= 10; i++) {
     let textDataElement =document.getElementsByClassName("TextData")[i];
     if (textDataElement) {
         let height = textDataElement.clientHeight;
@@ -30,9 +30,22 @@ async function RevealVideo() {
     document.getElementsByClassName("TextButton")[0].classList.remove("hidden")
 }
 
+function PlayVideo() {
+    for (let i = 1; i <= 3; i++) {
+        document.getElementsByTagName("video")[i].addEventListener('click', function() {
+            if (this.paused) {
+                this.play();
+            } else {
+                this.pause();
+            }
+        });
+    }
+}   
+
 document.addEventListener('DOMContentLoaded', function () {
     ImageSize()
     RevealVideo()
+    PlayVideo()
     window.addEventListener('scroll', function () {
         if (Prev<window.scrollY && Prev == 0) {
             document.querySelector('body').style.setProperty('--Header-Height', '100px');
@@ -50,7 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (entry.isIntersecting) {
                 entry.target.classList.remove("hidden");
                 const TextData=entry.target.getElementsByClassName("TextData")[0];
-                const Image=entry.target.getElementsByTagName("img")[0];
+                var Image=entry.target.getElementsByTagName("img")[0];
+                if (!Image){
+                    var Image=entry.target.getElementsByTagName("video")[0]
+                }
                 if (TextData.classList.contains("TextDataRight")){
                     TextData.classList.remove("hiddenAnimationRight")
                     Image.classList.remove("hiddenAnimationRight")
@@ -61,7 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
             } else{
                 entry.target.classList.add("hidden");
                 const TextData=entry.target.getElementsByClassName("TextData")[0];
-                const Image=entry.target.getElementsByTagName("img")[0];
+                var Image=entry.target.getElementsByTagName("img")[0];
+                if (!Image){
+                    var Image=entry.target.getElementsByTagName("video")[0]
+                    Image.pause()
+                }
                 if (TextData.classList.contains("TextDataRight")){
                     TextData.classList.add("hiddenAnimationRight")
                     Image.classList.add("hiddenAnimationRight")
