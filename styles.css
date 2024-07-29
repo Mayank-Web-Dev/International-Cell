@@ -435,7 +435,7 @@ body,html p {
     border-radius: 7px;
     padding: 5px 10px;
     position: absolute;
-    top:calc(100svh - 50px);
+    top:calc(100dvh - 50px);
     left:50%;
     transform: translate(-50%, -50%);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
