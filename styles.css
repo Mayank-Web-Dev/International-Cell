@@ -119,11 +119,11 @@ body,html p {
     padding: 2px 5px;
     position: absolute;
     top: 50px;
-    left:calc(100vw - 640px);
+    left:calc(100vw - 750px);
     transform: translate(0%, -50%);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
     transition: all 0.5s ease;
-    width:560px;
+    width:670px;
     text-align: center;
     align-items: center;
     justify-content: center;
