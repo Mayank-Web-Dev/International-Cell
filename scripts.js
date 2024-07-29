@@ -15,6 +15,7 @@ for (let i = 0; i <= 7; i++) {
         let hiddenElement = document.getElementsByClassName("Image")[i];
         if (hiddenElement) {
             hiddenElement.style.setProperty("height", `${height}px`);
+            hiddenElement.classList.remove('hidden');
         }
     }
 }}
@@ -44,36 +45,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         Prev = window.scrollY
     });
-});
-
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.remove("hidden");
-            const TextData=entry.target.getElementsByClassName("TextData")[0];
-            const Image=entry.target.getElementsByTagName("img")[0];
-            if (TextData.classList.contains("TextDataRight")){
-                TextData.classList.remove("hiddenAnimationRight")
-                Image.classList.remove("hiddenAnimationRight")
-            }else if (TextData.classList.contains("TextDataLeft")){
-                TextData.classList.remove("hiddenAnimationLeft")
-                Image.classList.remove("hiddenAnimationLeft")
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove("hidden");
+                const TextData=entry.target.getElementsByClassName("TextData")[0];
+                const Image=entry.target.getElementsByTagName("img")[0];
+                if (TextData.classList.contains("TextDataRight")){
+                    TextData.classList.remove("hiddenAnimationRight")
+                    Image.classList.remove("hiddenAnimationRight")
+                }else if (TextData.classList.contains("TextDataLeft")){
+                    TextData.classList.remove("hiddenAnimationLeft")
+                    Image.classList.remove("hiddenAnimationLeft")
+                }
+            } else{
+                entry.target.classList.add("hidden");
+                const TextData=entry.target.getElementsByClassName("TextData")[0];
+                const Image=entry.target.getElementsByTagName("img")[0];
+                if (TextData.classList.contains("TextDataRight")){
+                    TextData.classList.add("hiddenAnimationRight")
+                    Image.classList.add("hiddenAnimationRight")
+                }else if (TextData.classList.contains("TextDataLeft")){
+                    TextData.classList.add("hiddenAnimationLeft")
+                    Image.classList.add("hiddenAnimationLeft")
+                }
             }
-
-        } else{
-            entry.target.classList.add("hidden");
-            const TextData=entry.target.getElementsByClassName("TextData")[0];
-            const Image=entry.target.getElementsByTagName("img")[0];
-            if (TextData.classList.contains("TextDataRight")){
-                TextData.classList.add("hiddenAnimationRight")
-                Image.classList.add("hiddenAnimationRight")
-            }else if (TextData.classList.contains("TextDataLeft")){
-                TextData.classList.add("hiddenAnimationLeft")
-                Image.classList.add("hiddenAnimationLeft")
-            }
-        }
+        });
     });
+    const hiddenElement = document.querySelectorAll(".Container")
+    hiddenElement.forEach((el) => observer.observe(el));
 });
-const hiddenElement = document.querySelectorAll(".Container")
-hiddenElement.forEach((el) => observer.observe(el));
+
