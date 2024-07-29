@@ -7,18 +7,28 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function smoothScroll(target) {
+    document.querySelector(target).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
 function ImageSize(){
-for (let i = 0; i <= 10; i++) {
-    let textDataElement =document.getElementsByClassName("TextData")[i];
-    if (textDataElement) {
-        let height = textDataElement.clientHeight;
-        let hiddenElement = document.getElementsByClassName("Image")[i];
-        if (hiddenElement) {
-            hiddenElement.style.setProperty("height", `${height}px`);
-            hiddenElement.classList.remove('hidden');
+    
+    for (let i = 0; i <= 10; i++) {
+        let textDataElement =document.getElementsByClassName("TextData")[i];
+        if (textDataElement) {
+            let height = textDataElement.clientHeight;
+            let hiddenElement = document.getElementsByClassName("Image")[i];
+            if (hiddenElement) {
+                if (ScreenWidth>800){
+                hiddenElement.style.setProperty("height", `${height}px`);
+                }
+                hiddenElement.classList.remove('hidden');
+            }
         }
     }
-}}
+}
 
 async function RevealVideo() {
     await sleep(500)
