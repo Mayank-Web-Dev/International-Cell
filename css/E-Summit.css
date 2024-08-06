@@ -1,0 +1,92 @@
+@import 'Default.css';
+
+
+
+.RiveHolder {
+    border-radius: 15px;
+    position: relative;
+    top: 110px;
+    text-align: center;
+    margin-left: 1%;
+}
+
+.CanvasScroller {
+    position: relative;
+    text-align: center;
+    height: calc(calc(100vh - 100px)* 3);
+    background-color: #cb90e5;
+    border-radius: 15px;
+}
+
+#canvas1{
+    z-index: 5;
+    pointer-events: none;
+    position: sticky;
+    top:116px;
+    height:calc(100vh - 100px);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+#canvas2 ,#canvas3,#canvas4,#canvas5 {
+    position: relative;
+    top: 116px;
+    pointer-events: none;
+    height: calc(100vh - 100px);
+    background-color: #cb90e5;
+    border-radius: 15px;
+    width: 99%;
+    text-align: center;
+    margin-bottom: 6px;
+    align-self: center;
+    margin-left: 1%;
+}
+
+.TrackContainer {
+    opacity: 0;
+    display: grid;
+    position: relative;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    grid-template-rows: 5% 5vmin 5vmin 5vmin 5vmin 5vmin  5%;
+    height: calc(100vh - 100px);
+    width: 99%;
+    top: 116px;
+    background-color: #cb90e5;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 6px;
+    align-self: center;
+    margin-left: 1%;
+}
+
+.TrackContainer h1{
+    font: bolder;
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+.TrackContainer h2{
+    font:bold;
+    grid-area: 3 / 2 / 4 / 4 ;
+}
+
+.TrackContainer p:nth-child(0){
+    font-size: 2vmin;
+    display: flex;
+    position: relative;
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.TrackContainer p:nth-child(1){
+    font-size: 2vmin;
+    display: flex;
+    position: relative;
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.TrackContainer p:nth-child(2){
+    font-size: 2vmin;
+    display: flex;
+    position: relative;
+    grid-area: 6 / 2 / 7 / 3;
+}

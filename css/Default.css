@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
+@import 'NavigationBtn.css';
+@import 'ESButton.css';
+
+body,html {
+    --BG-col:#d2b7f3;
+    --Header-Col:#edede9;
+    --Header-Height:170px;
+    --Data-Colour:#e1e0da;
+    --Info-Colour:#cfcec7;
+    --Another-Colour:#c1bfb2;
+    --Text-Padding:10px;
+    background-color:var(--BG-col);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    margin-right:1%;
+    margin-left:1%;
+    height:fit-content;
+    margin-top: 0px;
+
+}
+
+body,html h2 {
+    font-family: "DM Serif Display", serif;
+}
+body,html p {
+    font-family: "Playfair Display", serif;
+}
+
+.hidden {
+    opacity:0;
+}
+
+.hiddenAnimationLeft{
+    opacity:0;
+    filter:blur(5px);
+    transform:translateX(-100%);
+    transition: all 1s ease;
+}
+
+.hiddenAnimationRight{
+    opacity:0;
+    filter:blur(5px);
+    transform:translateX(100%);
+    transition: all 1s ease;
+}
+
+
+.header {
+    position:absolute;
+    color:#edede9;
+    display:flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.Cont {
+    background-color:var(--Header-Col);
+    position:fixed;
+    border-radius: 15px;
+    padding: 5px 10px 2px 10px;
+    height:var(--Header-Height);
+    z-index: 10;
+    transition: all 0.5s ease;
+    margin-top: 6px;
+    width:96%;
+}
+
+
+.Logo img {
+    position:relative;
+    top:45px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height:100px;
+    width:100px;
+    transition: all 0.5s ease;
+}
+
+.LogoSide img {
+    position:relative;
+    top:45px;
+    left:40px;
+    transform: translate(-50%,-50%);
+    height:80px;
+    width:80px;
+    transition: all 0.5s ease;   
+}
+
+.ButtonBox{
+    z-index:11;
+    display:flex;
+    background-color: #180161;
+    overflow: auto;
+    scrollbar-width:none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 135px;
+    left:3%;
+    transform: translate(-0%, -50%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    width: 94%;
+    transition: all 0.5s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-wrap:nowrap;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease;  
+    font-family: 'Playfair Display';
+}
+
+.ButtonBoxAlt {
+    z-index:11;
+    display:flex;
+    background-color: #180161;
+    overflow-x:auto;
+    scrollbar-width:none;
+    border-radius: 7px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50px;
+    left:calc(100vw - 800px);
+    transform: translate(0%, -50%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease;
+    width:670px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-wrap:nowrap;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease; 
+    font-family: 'Playfair Display';
+}
