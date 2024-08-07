@@ -44,11 +44,10 @@
 }
 
 .TrackContainer {
-    opacity: 0;
     display: grid;
     position: relative;
     grid-template-columns: 5% 1fr 1fr 5%;
-    grid-template-rows: 5% 5vmin 5vmin 5vmin 5vmin 5vmin  5%;
+    grid-template-rows: 5% 5vmin 5vmin 1fr  5%;
     height: calc(100vh - 100px);
     width: 99%;
     top: 116px;
@@ -62,31 +61,19 @@
 
 .TrackContainer h1{
     font: bolder;
-    grid-area: 2 / 2 / 4 / 4;
+    grid-area: 2 / 2 / 2 / 4;
+    text-align:left;
+    margin:0px;
 }
 
 .TrackContainer h2{
     font:bold;
-    grid-area: 3 / 2 / 4 / 4 ;
+    grid-area: 3 / 2 / 3 / 4 ;
+    text-align: left;
+    margin:0px;
 }
 
-.TrackContainer p:nth-child(0){
-    font-size: 2vmin;
-    display: flex;
-    position: relative;
-    grid-area: 4 / 2 / 5 / 3;
-}
-
-.TrackContainer p:nth-child(1){
-    font-size: 2vmin;
-    display: flex;
-    position: relative;
-    grid-area: 5 / 2 / 6 / 3;
-}
-
-.TrackContainer p:nth-child(2){
-    font-size: 2vmin;
-    display: flex;
-    position: relative;
-    grid-area: 6 / 2 / 7 / 3;
+.Paras {
+    grid-area: 4 / 2 / 4 / 3;
+    text-align:left;
 }
