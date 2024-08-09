@@ -261,15 +261,15 @@ body,html p {
 }
 
 .SocialsHolder{
+	z-index: 99999;
 	display:flex;
 	flex-wrap: wrap;
 	background-color:#e3e3e3;
 	border-radius: 9px;
-	overflow-x: hidden;
-	height: 100px;
+	height: 140px;
 	padding: 30px;
 	justify-content: space-evenly;
-	align-content: end;
+	align-content: center;
 }
 
 .tooltip-container {
