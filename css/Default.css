@@ -140,3 +140,67 @@ body,html p {
     transition: all 0.5s ease; 
     font-family: 'Playfair Display';
 }
+
+@media screen and (max-width: 800px) {
+    .ButtonBox{
+		display:block;
+	}
+	.ButtonBoxAlt {
+    z-index:11;
+    display:block;
+    background-color: #1650a8;
+    overflow:auto;
+    scrollbar-width:none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    position: absolute;
+    top:calc(100dvh - 50px);
+    left:50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    width:94%;
+    transition: all 0.5s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-wrap:nowrap;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease;  
+    }
+	.Container{
+	grid-template-rows:auto;
+	grid-template-columns:1fr;
+	grid-template-areas:'Image'
+	"Content";
+	}
+	.TextDataRight{
+		grid-area:1 / 1 / 2 / 2;
+	}
+
+.Testimonials .Container .TextDataRight ,.Testimonials .Container .TextDataLeft{
+	grid-area: 2 / 1 / 3 /3;
+}
+	.TestimonialsContainer {
+		flex-wrap:wrap;
+	}
+	.Testimonials .Container{
+	grid-template-columns:1fr;
+	grid-template-areas:
+		'Image'
+		'Content';
+	grid-template-rows:1fr;
+	flex-basis: auto;
+	flex-grow: 1;
+	}
+	.Footer {
+		height:240px;
+	}
+}
+
+@media  screen and (min-width: 1000px)  {
+	.HighlightsContainer p{
+	  padding-left: 10%;
+    padding-right: 10%;
+	}
+}

@@ -47,8 +47,8 @@
     display: grid;
     position: relative;
     grid-template-columns: 5% 1fr 1fr 5%;
-    grid-template-rows: 5% 5vmin 5vmin 1fr  5%;
-    height: calc(100vh - 100px);
+    grid-template-rows: 5% 6vmin 5.5vmin 50vmin 5%;
+    height: fit-content;
     width: 99%;
     top: 116px;
     background-color: #cb90e5;
@@ -60,10 +60,11 @@
 }
 
 .TrackContainer h1{
-    font: bolder;
+    font-weight: bolder;
     grid-area: 2 / 2 / 2 / 4;
     text-align:left;
     margin:0px;
+    font-size: 5vmin;
 }
 
 .TrackContainer h2{
@@ -71,9 +72,16 @@
     grid-area: 3 / 2 / 3 / 4 ;
     text-align: left;
     margin:0px;
+    font-size: 4.5vmin;
 }
 
 .Paras {
     grid-area: 4 / 2 / 4 / 3;
     text-align:left;
+    font-size:3.5vmin;
+    height: fit-content;
+}
+
+.Paras p {
+    margin:0px;
 }
