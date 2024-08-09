@@ -17,7 +17,6 @@ body,html {
     margin-right:1%;
     margin-left:1%;
     height:fit-content;
-    scroll-behavior: smooth;
 }
 
 body,html h2 {
@@ -134,231 +133,302 @@ body,html p {
     flex-wrap: nowrap;
     transition: all 0.5s ease;  
 }
-.WowMain {
-    width: 290px;
-    height: 300px;
-    perspective: 1000px;
-  }
-  
-  .WowCard {
-    height: 100%;
-    border-radius: 50px;
-    background: linear-gradient(135deg, rgb(199, 50, 212) 0%, rgb(131, 8, 247) 100%);
-    transition: all 0.5s ease-in-out;
-    transform-style: preserve-3d;
-    box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
-  }
-  
-  .WowGlass {
-    transform-style: preserve-3d;
-    position: absolute;
-    inset: 8px;
-    border-radius: 55px;
-    border-top-right-radius: 100%;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
-    /* -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px); */
-    transform: translate3d(0px, 0px, 25px);
-    border-left: 1px solid white;
-    border-bottom: 1px solid white;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .WowText {
-    padding: 100px 60px 0px 30px;
-    transform: translate3d(0, 0, 26px);
-  }
-  
-  .WowText .title {
-    display: block;
-    color: #520089;
-    font-weight: 900;
-    font-size: 20px;
-  }
-  
-  
-  .ScottHunter {
-    padding: 10px 12px;
-    transform-style: preserve-3d;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transform: translate3d(0, 0, 26px);
-  }
-  
-  .ScottHunter .view-more {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    justify-content: flex-end;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .ScottHunter .view-more:hover {
-    transform: translate3d(0, 0, 10px);
-  }
-  
-  .ScottHunter .view-more .view-more-button {
-    background: none;
-    border: none;
-    color: #520089;
-    font-weight: bolder;
-    font-size: 12px;
-  }
-  
-  .ScottHunter .view-more .svg {
-    fill: none;
-    stroke: #520089;
-    stroke-width: 3px;
-    max-height: 15px;
-  }
-  
-  .ScottHunter .social-buttons-container {
-    display: flex;
-    gap: 10px;
-    transform-style: preserve-3d;
-  }
-  
-  .ScottHunter .social-buttons-container .social-button {
-    width: 30px;
-    aspect-ratio: 1;
-    padding: 5px;
-    background: rgb(255, 255, 255);
-    border-radius: 50%;
-    border: none;
+.ContactUsData {
     display: grid;
-    place-content: center;
-    box-shadow: rgba(5, 71, 17, 0.5) 0px 7px 5px -5px;
-  }
-  
-  .ScottHunter .social-buttons-container .social-button:first-child {
-    transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
-  }
-  
-  .ScottHunter .social-buttons-container .social-button:nth-child(2) {
-    transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
-  }
-  
-  .ScottHunter .social-buttons-container .social-button:nth-child(3) {
-    transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
-  }
-  
-  .ScottHunter .social-buttons-container .social-button .svg {
-    width: 15px;
-    fill: #520089;
-  }
-  
-  .ScottHunter .social-buttons-container .social-button:hover {
-    background: black;
-  }
-  
-  .ScottHunter .social-buttons-container .social-button:hover .svg {
-    fill: white;
-  }
-  
-  .ScottHunter .social-buttons-container .social-button:active {
-    background: rgb(255, 234, 0);
-  }
-  
-  .ScottHunter .social-buttons-container .social-button:active .svg {
-    fill: black;
-  }
-  
-  .WowLogo {
+    position:relative;
+    top:calc(var(--Header-Height) + 10px);
+    background-color:var(--Data-Colour);
+    border-radius: 15px;
+    grid-template-columns: 1fr 1fr;
+    overflow-x: hidden;
+    height:fit-content;
+    padding-bottom:5px;
+    padding: 30px;
+}
+
+.Contact {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 1.5em;
+}
+.MailHolder{
+	display:grid;
+	gap:5px;
+}
+
+.Mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  width: 100%;
+  flex-direction: column;
+  gap: 35px;
+  border-radius: 15px;
+  background: #e3e3e3;
+  box-shadow: 16px 16px 32px #c8c8c8,
+        -16px -16px 32px #fefefe;
+  border-radius: 8px;
+}
+
+.inputBox {
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #000;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.Fix input:valid~span,
+.Fix input:focus~span {
+  transform: translateX(156px) translateY(-15px);
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 3em;
+}
+
+.enter:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+#input-sizer {
+    white-space: pre;
+    word-wrap: break-word;
+    border-radius: 4px;
     position: absolute;
-    right: 0;
     top: 0;
-    transform-style: preserve-3d;
-  }
-  
-  .WowLogo .circle {
-    display: block;
-    position: absolute;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    top: 0;
-    right: 0;
-    box-shadow: rgba(105, 100, 111, 0.2) -10px 10px 20px 0px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    background: rgba(116, 0, 249, 0.2);
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .WowLogo .circle1 {
-    width: 170px;
-    transform: translate3d(0, 0, 20px);
-    top: 8px;
-    right: 8px;
-  }
-  
-  .WowLogo .circle2 {
-    width: 140px;
-    transform: translate3d(0, 0, 40px);
-    top: 10px;
-    right: 10px;
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px);
-    transition-delay: 0.4s;
-  }
-  
-  .WowLogo .circle3 {
-    width: 110px;
-    transform: translate3d(0, 0, 60px);
-    top: 17px;
-    right: 17px;
-    transition-delay: 0.8s;
-  }
-  
-  .WowLogo .circle4 {
-    width: 80px;
-    transform: translate3d(0, 0, 80px);
-    top: 23px;
-    right: 23px;
-    transition-delay: 1.2s;
-  }
-  
-  .WowLogo .circle5 {
-    width: 50px;
-    transform: translate3d(0, 0, 100px);
-    top: 30px;
-    right: 30px;
-    display: grid;
-    place-content: center;
-    transition-delay: 1.6s;
-  }
-  
-  .WowLogo .circle5 .svg {
-    width: 20px;
-    fill: white;
-  }
-  
-  .WowMain:hover .WowCard {
-    transform: rotate3d(1, 1, 0, 30deg);
-    box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
-  }
-  
-  .WowMain:hover .WowCard .ScottHunter .social-buttons-container .social-button {
-    transform: translate3d(0, 0, 50px);
-    box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
-  }
-  
-  .WowMain:hover .WowCard .WowLogo .circle2 {
-    transform: translate3d(0, 0, 60px);
-  }
-  
-  .WowMain:hover .WowCard .WowLogo .circle3 {
-    transform: translate3d(0, 0, 80px);
-  }
-  
-  .WowMain:hover .WowCard .WowLogo .circle4 {
-    transform: translate3d(0, 0, 100px);
-  }
-  
-  .WowMain:hover .WowCard .WowLogo .circle5 {
-    transform: translate3d(0, 0, 120px);
-  }
+    left: 0;
+}
+
+.SocialsHolder{
+	display:flex;
+	flex-wrap: wrap;
+	background-color:#e3e3e3;
+	border-radius: 9px;
+	overflow-x: hidden;
+	height: 100px;
+	padding: 30px;
+	justify-content: space-evenly;
+	align-content: end;
+}
+
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.profile {
+  background: #2a2b2f;
+  border-radius: 10px 15px;
+  padding: 10px;
+  border: 1px solid #52382f;
+}
+
+.tooltip-container:hover .tooltip {
+  top: -130px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+.layer {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s;
+}
+.icon:hover .layer {
+  transform: rotate(-35deg) skew(20deg);
+}
+.layer span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.layer span,
+.text {
+  color: #e6683c;
+  border-color: #e6683c;
+}
+
+.icon:hover.layer span {
+  box-shadow: -1px 1px 3px #e6683c;
+}
+.icon .text {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  opacity: 0;
+  font-weight: 500;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.icon:hover .text {
+  bottom: -35px;
+  opacity: 1;
+}
+
+.icon:hover .layer span:nth-child(1) {
+  opacity: 0.2;
+}
+.icon:hover .layer span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+.icon:hover .layer span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+.icon:hover .layer span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+.icon:hover .layer span:nth-child(5) {
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+
+.instagramSVG {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.user {
+  display: flex;
+  gap: 10px;
+}
+.img {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 700;
+  border: 1px solid #e6683c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #e6683c;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #fff;
+}
+.about {
+  color: #ccc;
+  padding-top: 5px;
+}
+
