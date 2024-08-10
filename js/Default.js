@@ -38,3 +38,39 @@ function HeaderAnimator() {
         Prev = window.scrollY
     });
 }
+
+document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Get the email input value
+    const email = document.getElementById('email').value;
+
+    // Create the payload for the webhook
+    const payload = {
+        content: `**New Subscription Request**\n\n**Email:** ${email}`
+    };
+
+    // Send the data to the Discord webhook
+    fetch('https://discord.com/api/webhooks/1271636880567570594/vauUUjOEki4BALb7VUdlZg698xztJxhNt6LjpsiRUMY18YKhXU7qWL4BljPk1U8zH4DL', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response;
+        } else {
+            throw new Error('Network response was not ok.');
+        }
+    })
+    .then(data => {
+        console.log('Success:', data);
+        alert('Subscription successful!');
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('There was an error with your subscription.');
+    });
+});

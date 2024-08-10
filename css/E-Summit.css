@@ -44,44 +44,176 @@
 }
 
 .TrackContainer {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    grid-template-columns: 5% 1fr 1fr 5%;
-    grid-template-rows: 5% 6vmin 5.5vmin 50vmin 5%;
     height: fit-content;
-    width: 99%;
+    width: 98%;
     top: 116px;
     background-color: #cb90e5;
+    background-image:url("../assets/BG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 15px;
     text-align: center;
     margin-bottom: 6px;
     align-self: center;
     margin-left: 1%;
+    padding: 20px;
+    font-family: 'Mohave', sans-serif;
 }
 
 .TrackContainer h1{
     font-weight: bolder;
-    grid-area: 2 / 2 / 2 / 4;
     text-align:left;
     margin:0px;
     font-size: 5vmin;
 }
 
 .TrackContainer h2{
-    font:bold;
-    grid-area: 3 / 2 / 3 / 4 ;
+    font-family: 'Mohave', sans-serif;
+    font-weight: bold;
     text-align: left;
     margin:0px;
     font-size: 4.5vmin;
 }
 
-.Paras {
-    grid-area: 4 / 2 / 4 / 3;
+.Written {
+    font-family: 'Mohave', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Written p {
+    font-family: 'Mohave', sans-serif;
+}
+
+.ParasLeft {
+    grid-area: 1 / 1 / 2 / 2;
     text-align:left;
-    font-size:3.5vmin;
+    font-size:3vmin;
     height: fit-content;
 }
 
-.Paras p {
+.ParasLeft p {
     margin:0px;
 }
+
+/* Define the keyframes for the slide-in effect */
+/* Define the keyframes for the slide-in effect */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Base styles for the elements */
+  .AnimateLeft {
+    opacity: 0; /* Start with hidden */
+    transform: translateX(-100%); /* Start off-screen */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+    animation-delay: 0s; /* Default to no delay */
+  }
+  
+  /* Class applied when the element is in view */
+  .in-view-Left {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+  
+  
+  /* Optional: You can use this class for an additional delay */
+  .AnimateLeft:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .AnimateLeft:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .AnimateLeft:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .AnimateRight {
+    opacity: 0; /* Start with hidden */
+    transform: translateX(100%); /* Start off-screen */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+    animation-delay: 0s; /* Default to no delay */
+  }
+  
+  /* Class applied when the element is in view */
+  .in-view-Right {
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+  
+  
+  /* Optional: You can use this class for an additional delay */
+  .AnimateRight:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .AnimateRight:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .AnimateRight:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  /* You can use these styles for other elements or further customization */
+  .TrackContainer {
+    overflow: hidden; /* Ensure no overflow during animation */
+  }
+  
+  h1, h2, p {
+    margin: 0;
+  }
+
+/* Define the keyframes for the height animation */
+@keyframes growHeight {
+    from {
+      height: 0;
+      opacity: 0; /* Optional: Fade in as it grows */
+    }
+    to {
+      height: 200px;
+      opacity: 1; /* Optional: Fully visible */
+    }
+  }
+  
+  /* Base styles for .Grow */
+  .Grow {
+    height: 0; /* Start height */
+    width: auto; /* Width adjusts based on content */
+    opacity: 0; /* Optional: Start as invisible */
+    transition: height 1s ease-out, opacity 1s ease-out; /* Smooth transition */
+  }
+  
+  /* Animation applied when in view */
+  .Grow.animate {
+    animation: growHeight 1s ease-out forwards;
+  }
+  
+  /* Positioning for the Grow elements */
+  .Grow:nth-child(1) {
+    position: absolute;
+    left: 55%;
+  }
+  
+  .Grow:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+  }
+  

@@ -141,6 +141,85 @@ body,html p {
     font-family: 'Playfair Display';
 }
 
+/* Base Flexbox Container */
+.flex {
+    display: flex;
+  }
+  .gap-1 {
+    gap: 0.25rem; /* Tailwind's gap-1 is 0.25rem */
+  }
+  
+  /* Input Container */
+  .input-container {
+    position: relative;
+    border-radius: 0.5rem; /* Tailwind's rounded-lg is 0.5rem */
+    width: 16rem; /* Tailwind's w-64 is 16rem */
+    overflow: hidden;
+  }
+  .input-container::before {
+    content: '';
+    position: absolute;
+    width: 3rem; /* Tailwind's w-12 is 3rem */
+    height: 3rem; /* Tailwind's h-12 is 3rem */
+    right: 0;
+    background-color: #7c3aed; /* Tailwind's bg-violet-500 */
+    border-radius: 9999px; /* Tailwind's rounded-full */
+    filter: blur(8px); /* Tailwind's blur-lg */
+  }
+  .input-container::after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    width: 5rem; /* Tailwind's w-20 is 5rem */
+    height: 5rem; /* Tailwind's h-20 is 5rem */
+    background-color: #fecdd3; /* Tailwind's bg-rose-300 */
+    right: 3rem; /* Tailwind's right-12 is 3rem */
+    top: 0.75rem; /* Tailwind's top-3 is 0.75rem */
+    border-radius: 9999px; /* Tailwind's rounded-full */
+    filter: blur(8px); /* Tailwind's blur-lg */
+  }
+  
+  /* Input Field */
+  .input-field {
+    position: relative;
+    background: transparent;
+    border: 1px solid #d1d5db; /* Tailwind's border-neutral-500 */
+    color: #111827; /* Tailwind's text-neutral-900 */
+    placeholder-color: #6d28d9; /* Tailwind's placeholder-violet-700 */
+    font-size: 0.875rem; /* Tailwind's text-sm */
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    padding: 0.625rem; /* Tailwind's p-2.5 */
+    width: 100%;
+    box-shadow: none; /* Tailwind's ring-0 */
+    z-index: 100;
+  }
+  .input-field::placeholder {
+    opacity: 0.6; /* Tailwind's placeholder-opacity-60 */
+  }
+  .input-field:focus {
+    border-color: #7c3aed; /* Tailwind's focus:border-violet-500 */
+    outline: none;
+  }
+  
+  /* Subscribe Button */
+  .subscribe-button {
+    background-color: #7c3aed; /* Tailwind's bg-violet-500 */
+    color: #f9fafb; /* Tailwind's text-neutral-50 */
+    padding: 0.5rem; /* Tailwind's p-2 */
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    transition: background-color 0.2s ease;
+  }
+  .subscribe-button:hover {
+    background-color: #a78bfa; /* Tailwind's hover:bg-violet-400 */
+  }
+.Footer {
+    display: flex;
+    align-items: center;
+}
+.AddMail {
+    position: absolute;
+    right: 3%;
+}
 @media screen and (max-width: 800px) {
     .ButtonBox{
 		display:block;
@@ -195,8 +274,10 @@ body,html p {
 	}
 	.Footer {
 		height:240px;
+        
 	}
 }
+
 
 @media  screen and (min-width: 1000px)  {
 	.HighlightsContainer p{
