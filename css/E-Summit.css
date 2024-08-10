@@ -64,6 +64,7 @@
     font-family: 'Mohave', sans-serif;
 }
 
+
 .TrackContainer h1{
     font-weight: bolder;
     text-align:left;
@@ -77,6 +78,14 @@
     text-align: left;
     margin:0px;
     font-size: 4.5vmin;
+}
+
+.Right h1 {
+  text-align:right;
+}
+
+.Right h2 {
+  text-align:right;
 }
 
 .Written {
@@ -99,7 +108,16 @@
 .ParasLeft p {
     margin:0px;
 }
+.ParasRight {
+  grid-area: 2 / 1 / 3 / 3;
+  text-align:left;
+  font-size:3vmin;
+  height: fit-content;
+}
 
+.ParasRight p {
+  margin:0px;
+}
 /* Define the keyframes for the slide-in effect */
 /* Define the keyframes for the slide-in effect */
 @keyframes slideInFromLeft {
@@ -217,3 +235,12 @@
     right: 5%;
   }
   
+  @media screen and (max-width: 800px) {
+  .Written {
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr;
+  }
+      .ParasRight {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  }
