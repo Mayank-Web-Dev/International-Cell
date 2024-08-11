@@ -1,0 +1,78 @@
+@import 'Default.css';
+.AnimationContainer {
+    position: relative;
+    overflow: hidden;
+    margin-right: 1%;
+    margin-left: 1%;
+    height: calc(calc(100vh - var(--Header-Height)) - 18px);;
+    top: calc(var(--Header-Height) + 6px);
+}
+
+.AnimationHolder {
+    height: calc(calc(100vh - var(--Header-Height)) - 18px);
+    width: 100%;
+        background-image:url("../assets/Background.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+    }
+    
+    .Gradient {
+        position: relative;
+        top: 0;
+        left: 50%;
+        animation: GradientUp 5s ease-in-out forwards;
+    }
+    
+    .LogoAnimation {
+        position: absolute;
+        width: 40dvw;
+        z-index: 5;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: reveal 5s ease-in-out forwards;
+        animation-delay: 5s;
+    }
+    
+    .Round {
+        position: absolute;
+        width: 50dvw;
+        z-index: 4;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: rotateAndShrink 5s ease-in-out forwards;
+    }
+
+  @keyframes GradientUp{
+    0% {
+        top: 0;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        top: 100%;
+        transform: translateX(-50%) translateY(-100%);
+    }
+}
+@keyframes rotateAndShrink {
+    0% {
+        transform:  translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+    75% {
+        transform:  translate(-50%, -50%) rotate(270deg) scale(1);
+    }
+    100% {
+        transform:  translate(-50%, -50%) rotate(360deg) scale(0);
+    }
+}
+
+@keyframes reveal {
+    0%{
+        transform: (-50%, -50%);
+    } 50%{
+        transform: translate(16%, -50%);
+    } 100%{
+        transform: translate(-300%, -50%);
+    }
+}
