@@ -209,6 +209,10 @@
   fill: #333;
 }
 
+.Footer {
+  top: calc(var(--Header-Height) + 6px);
+}
+
 @media screen and (max-width: 800px) {
 	.ContactUsData{
 		grid-template-columns: 1fr;

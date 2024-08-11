@@ -373,7 +373,6 @@ html p {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
   position: relative;
-  top: calc(var(--Header-Height) + 6px);
 }
 
 .SocialsLogo {
