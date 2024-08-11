@@ -181,49 +181,11 @@
     </div>
     <footer>
         <div class="Footer">
-            <div class="DropDownHolder">
-                <div class="DropDown">
-                  <svg
-                    y="0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0"
-                    width="100"
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="xMidYMid meet"
-                    height="100"
-                    class="w-8 h-8 absolute right-0 -rotate-45 stroke-pink-300 top-1.5 group-hover:rotate-0 duration-300"
-                  >
-                    <path
-                      stroke-width="4"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                      fill="none"
-                      d="M60.7,53.6,50,64.3m0,0L39.3,53.6M50,64.3V35.7m0,46.4A32.1,32.1,0,1,1,82.1,50,32.1,32.1,0,0,1,50,82.1Z"
-                      class="svg-stroke-primary"
-                    ></path>
-                  </svg>
-                  <select
-                    class="appearance-none hover:placeholder-shown:bg-emerald-500 relative text-pink-400 bg-transparent ring-0 outline-none border border-neutral-500 text-neutral-900 placeholder-violet-700 text-sm font-bold rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5"
-                  >
-                    <option>About Us</option>
-                    <option>Highlights</option>
-                    <option>Gallery</option>
-                    <option>E-Summit</option>
-                    <option>Contact Us</option>
-                    <option>About Christ NCR</option>
-                  </select>
-                </div>
-                <button
-                type="select"
-                class="subscribe-button"
-            >
-                Go
-            </button>
-            </div>
             <div class="SocialsLogo">
-                <h2>Soci</h2>
                 <div class="share bounce">
                     <img src="favicon.ico" alt="Logo">
+                    <h2>Socials</h2>
+
                     <!-- Facebook Link -->
                     <a class="fb" href="https://www.linkedin.com/in/department-of-psychology-christ-delhi-ncr" target="_blank" rel="noopener noreferrer">
                         <svg
@@ -285,9 +247,39 @@
                         </svg>
                     </a>
                 </div>
-                <h2>als</h2>
             </div>
             <div class="AddMail">
+                <div class="DropDownHolder">
+                    <div class="DropDown">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="100"
+                        height="100"
+                        viewBox="0 0 100 100"
+                        class="w-8 h-8 absolute right-0 -rotate-45 stroke-pink-300 top-1.5 group-hover:rotate-0 duration-300"
+                      >
+                        <path
+                          stroke-width="4"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                          fill="none"
+                          d="M60.7,53.6L50,64.3M50,64.3L39.3,53.6M50,64.3V35.7M50,82.1A32.1,32.1,0,1,1,82.1,50,32.1,32.1,0,0,1,50,82.1Z"
+                          class="svg-stroke-primary"
+                        ></path>
+                      </svg>
+                      <select id="dropdown" class="appearance-none relative text-gray-400 bg-transparent ring-0 outline-none border border-neutral-500 text-neutral-900 placeholder-violet-700 text-sm font-bold rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5">
+                        <option value="about-us">About Us</option>
+                        <option value="highlights">Highlights</option>
+                        <option value="gallery">Gallery</option>
+                        <option value="e-summit">E-Summit</option>
+                        <option value="contact-us">Contact Us</option>
+                        <option value="about-christ-ncr">About Christ NCR</option>
+                      </select>
+                    </div>
+                    <button id="goButton" type="button" class="subscribe-button">
+                      Go
+                    </button>
+                  </div>
                 <form id="subscribe-form">
                     <div class="flex gap-1">
                         <div class="input-container">
@@ -308,8 +300,6 @@
                     </div>
                 </form>
             </div>
-            
-                  
             </div>
         </div>
     </footer>

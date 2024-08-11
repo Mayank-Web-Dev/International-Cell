@@ -74,3 +74,24 @@ document.getElementById('subscribe-form').addEventListener('submit', function(ev
         alert('There was an error with your subscription.');
     });
 });
+
+document.getElementById('goButton').addEventListener('click', function() {
+    // Get the selected value from the dropdown
+    var selectedValue = document.getElementById('dropdown').value;
+    
+    // Define a mapping of options to URLs
+    var urls = {
+      'about-us': 'index.html#AboutUs',
+      'highlights': 'index.html#Highlights',
+      'gallery': 'index.html#Gallery',
+      'e-summit': 'E-summit.html',
+      'contact-us': 'ContactUs.html',
+      'about-christ-ncr': 'http://ncr.christuniversity.in'
+    };
+    
+    // Navigate to the URL based on the selected value
+    if (urls[selectedValue]) {
+      window.location.href = urls[selectedValue];
+    }
+  });
+  

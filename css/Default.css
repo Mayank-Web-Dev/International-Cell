@@ -157,8 +157,13 @@ body,html p {
     padding-bottom: 5px;
     font-style: italic;
     font-weight: bolder;
-    font-size: 22px;
+    font-size: 37px;
     text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1f1057;
 }
 
 .flex {
@@ -188,7 +193,7 @@ body,html p {
   .input-container::after {
     content: '';
     position: absolute;
-    z-index: 10;
+    z-index: 8;
     width: 5rem; /* Tailwind's w-20 is 5rem */
     height: 5rem; /* Tailwind's h-20 is 5rem */
     background-color: #fecdd3; /* Tailwind's bg-rose-300 */
@@ -209,7 +214,7 @@ body,html p {
     padding: 0.625rem; /* Tailwind's p-2.5 */
     width: 100%;
     box-shadow: none; /* Tailwind's ring-0 */
-    z-index: 100;
+    z-index: 9;
   }
   .input-field::placeholder {
     opacity: 0.6; /* Tailwind's placeholder-opacity-60 */
@@ -222,7 +227,6 @@ body,html p {
   .DropDownHolder {
     display: flex;
     gap: 3px;
-    margin: 10px;
   }
 
 
@@ -297,6 +301,9 @@ body,html p {
 .AddMail {
     justify-self: right;
     margin-right: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 @media screen and (max-width: 800px) {
     .ButtonBox{
