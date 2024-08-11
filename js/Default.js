@@ -24,7 +24,7 @@ function smoothScroll(target) {
     });
 }
 
-function HeaderAnimator() {
+
     window.addEventListener('scroll', function () {
         if (Prev<window.scrollY && Prev == 0) {
             document.querySelector('body').style.setProperty('--Header-Height', '100px');
@@ -37,7 +37,7 @@ function HeaderAnimator() {
         }
         Prev = window.scrollY
     });
-}
+
 
 document.getElementById('subscribe-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission behavior
