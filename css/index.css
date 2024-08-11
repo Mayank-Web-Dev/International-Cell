@@ -368,7 +368,10 @@
 	height:190px;
 	border-top-left-radius:15px;
 	border-top-right-radius:15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+
 
 .SocialsLogo {
 	width:fit-content;
@@ -447,8 +450,19 @@
 	flex-grow: 1;
 	}
 	.Footer {
-		height:240px;
+		height:380px;
+		grid-template-columns:1fr;
+    grid-template-rows:180px 60px 60px;
+    justify-items: center;		
 	}
+  .AddMail {
+    justify-self: center;	
+  }
+  .SocialsLogo{
+    grid-area: 1 / 1 / 2 / 2 ;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
 }
 
 @media  screen and (min-width: 1000px)  {

@@ -141,7 +141,26 @@ body,html p {
     font-family: 'Playfair Display';
 }
 
-/* Base Flexbox Container */
+
+
+.SocialsLogo {
+    justify-self: center;
+}
+
+.SocialsLogo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.SocialsLogo h2 {
+    padding-bottom: 5px;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
 .flex {
     display: flex;
   }
@@ -185,7 +204,6 @@ body,html p {
     background: transparent;
     border: 1px solid #d1d5db; /* Tailwind's border-neutral-500 */
     color: #111827; /* Tailwind's text-neutral-900 */
-    placeholder-color: #6d28d9; /* Tailwind's placeholder-violet-700 */
     font-size: 0.875rem; /* Tailwind's text-sm */
     border-radius: 0.5rem; /* Tailwind's rounded-lg */
     padding: 0.625rem; /* Tailwind's p-2.5 */
@@ -200,13 +218,73 @@ body,html p {
     border-color: #7c3aed; /* Tailwind's focus:border-violet-500 */
     outline: none;
   }
+
+  .DropDownHolder {
+    display: flex;
+    gap: 3px;
+    margin: 10px;
+  }
+
+
+  .DropDown {
+    position: relative;
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    width: 16rem; /* Equivalent to w-64 */
+    background: var(--Header-Col);
+    border: 1px solid #d1d5db; /* Tailwind's border-neutral-500 */
+    overflow: hidden;
+  }
   
+  .DropDown::before {
+    content: '';
+    position: absolute;
+    width: 3rem; /* Equivalent to w-12 */
+    height: 3rem; /* Equivalent to h-12 */
+    background-color: #8b5cf6; /* Equivalent to bg-violet-500 */
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    filter: blur(1rem); /* Equivalent to blur-lg */
+    box-shadow: -60px 20px 10px 10px #f9b0b9; /* Equivalent to [box-shadow:-60px_20px_10px_10px_#F9B0B9] */
+    right: 0;
+  }
+  .custom-input {
+  appearance: none; /* Removes default styling */
+  background-color: transparent; /* Matches bg-transparent */
+  border: 1px solid #6b7280; /* Matches border-neutral-500 */
+  color: #111827; /* Matches text-neutral-900 */
+  font-size: 0.875rem; /* Matches text-sm (14px) */
+  font-weight: 700; /* Matches font-bold */
+  border-radius: 0.5rem; /* Matches rounded-lg */
+  padding: 0.625rem; /* Matches p-2.5 (10px) */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  width: 100%; /* Matches w-full */
+  outline: none; /* Matches outline-none */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for background and border color */
+}
+
+/* Placeholder styles */
+.custom-input::placeholder {
+  color: #6d28d9; /* Matches placeholder-violet-700 */
+  transition: background-color 0.3s; /* Smooth transition for placeholder background */
+}
+
+/* Focus styles */
+.custom-input:focus {
+  border-color: #8b5cf6; /* Matches focus:border-violet-500 */
+  outline: none; /* Matches focus:ring-violet-500 */
+}
+
+/* Hover effect */
+.custom-input:hover::placeholder-shown {
+  background-color: #10b981; /* Matches hover:placeholder-shown:bg-emerald-500 */
+}
+
   /* Subscribe Button */
   .subscribe-button {
     background-color: #7c3aed; /* Tailwind's bg-violet-500 */
     color: #f9fafb; /* Tailwind's text-neutral-50 */
     padding: 0.5rem; /* Tailwind's p-2 */
     border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    text-wrap: nowrap;
     transition: background-color 0.2s ease;
   }
   .subscribe-button:hover {
@@ -217,8 +295,8 @@ body,html p {
     align-items: center;
 }
 .AddMail {
-    position: absolute;
-    right: 3%;
+    justify-self: right;
+    margin-right: 6px;
 }
 @media screen and (max-width: 800px) {
     .ButtonBox{
