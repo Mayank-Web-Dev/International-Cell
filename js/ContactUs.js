@@ -3,7 +3,7 @@ document.getElementById('submit-button').addEventListener('click', function(even
 
     // Gather form data
     const fullName = document.getElementById('full-name').value;
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('Email').value;
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
 

@@ -44,8 +44,13 @@ document.getElementById('subscribe-form').addEventListener('submit', function(ev
 
     // Get the email input value
     const email = document.getElementById('email').value;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    // Create the payload for the webhook
+    // Validate the email
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
     const payload = {
         content: `**New Subscription Request**\n\n**Email:** ${email}`
     };

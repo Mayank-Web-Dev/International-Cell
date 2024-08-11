@@ -119,7 +119,6 @@ function AnimationDirection(){
 
 document.addEventListener('DOMContentLoaded', function () {
     RevealVideo()
-    HeaderAnimator()
     NavButtonAnimator()
     SlideAnimator()
     AnimationDirection()
