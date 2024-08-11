@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -63,3 +64,73 @@ document.addEventListener('DOMContentLoaded', function() {
       observer.observe(element);
     });
   });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const splitTypes = document.querySelectorAll(".AnimateType");
+
+    splitTypes.forEach((char) => {
+        const split = new SplitType(char, { types: 'char' });
+
+        // Get all character elements
+        const characters = split.chars;
+        const totalChars = characters.length;
+
+        characters.forEach((character, i) => {
+            // Apply fade-in from the left with increasing delay
+            character.style.animation = `fadeIn 1s forwards`;
+            character.style.opacity = `0`;
+            character.style.animationDelay = `${7+(totalChars - i - 1) * 0.05}s`;
+        });
+    });
+});
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const headings = document.querySelectorAll('.HeadingHolder h1, .HeadingHolder h2, .HeadingHolder h3');
+  const paragraphs = document.querySelectorAll('.ParaHolder p');
+
+  const observerOptions = {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: 0.1 // Trigger animation when 10% of the element is visible
+  };
+
+  const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              const element = entry.target;
+
+              // Add animation classes when the element is in view
+              if (element.tagName === 'H1' || element.tagName === 'H2' || element.tagName === 'H3') {
+                  element.style.animation = `fadeInFromTop 1s ease-out forwards`;
+                  // Add specific delays for each heading
+                  if (element.tagName === 'H1') element.style.animationDelay = '0s';
+                  if (element.tagName === 'H2') element.style.animationDelay = '0.5s';
+                  if (element.tagName === 'H3') element.style.animationDelay = '1s';
+              }
+
+              if (element.tagName === 'P') {
+                  element.style.animation = `sweepFadeIn 1s ease-out forwards`;
+                  // Add specific delays for each paragraph
+                  if (element === paragraphs[0]) element.style.animationDelay = '1.5s';
+                  if (element === paragraphs[1]) element.style.animationDelay = '2s';
+              }
+
+              // Stop observing once the animation is applied
+              observer.unobserve(element);
+          }
+      });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // Observe each heading and paragraph
+  headings.forEach(heading => observer.observe(heading));
+  paragraphs.forEach(paragraph => observer.observe(paragraph));
+});
+
+function openLink() {
+  window.open('https://forms.gle/7ovFb2JFMrGXJie39', '_blank');
+}
