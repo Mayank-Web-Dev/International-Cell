@@ -165,9 +165,8 @@
   box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
   background: white;
   margin: 5px;
-  transition: 0.3s;
+  transition:0.5s ;
   justify-content: center;
-  transition: all 0.5s ease;
 }
 
 .social-btn svg {
@@ -178,23 +177,23 @@
 .social-btn span {
   width: 0px;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.5s;
   text-align: center;
   margin-left: 5px;
-  transition: all 0.5s ease;
+  text-wrap: nowrap;
 }
 
 .social-btn:hover {
-  width: fit-content;
+  width: 372px;
   border-radius: 5px;
-  transition: all 0.5s ease;
+  transition: 0.5s;
   padding: 10px;
 }
 
 .social-btn:hover span {
   padding: 5px;
-  width: fit-content;
-  transition: all 0.5s ease;
+  width: 372px;
+  transition: 0.5s;
 }
 
 #twitter svg {
