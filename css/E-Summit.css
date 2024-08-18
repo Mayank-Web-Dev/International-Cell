@@ -4,15 +4,6 @@
 @import 'Socials.css';
 @import 'Animations.css';
 
-
-.RiveHolder {
-    border-radius: 15px;
-    position: relative;
-    top: 110px;
-    text-align: center;
-    margin-left: 1%;
-}
-
 .TrackContainer {
     display: flex;
     flex-direction: column;
@@ -29,8 +20,7 @@
     align-self: center;
     padding: 40px;
     font-family: 'Mohave', sans-serif;
-    margin-right: 1%;
-    margin-left: 1%;
+
 }
 
 
@@ -292,7 +282,6 @@
   padding: 60px;
   margin-right: 1%;
   margin-left: 1%;
-  margin-bottom: 105px;
 }
 
 .JoinNow button {
@@ -335,3 +324,42 @@
     grid-area: 1 / 1 / 2 / 2;
   }
   }
+
+  .FAQ {
+    margin-bottom: 105px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #ededed;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s ease;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+}
+
+.faq-question:hover {
+    background: #e0e0e0;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    background: #f3f6f6;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+    text-align: start;
+}

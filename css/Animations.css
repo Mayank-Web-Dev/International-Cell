@@ -2,8 +2,7 @@
 .AnimationContainer {
     position: relative;
     overflow: hidden;
-    margin-right: 1%;
-    margin-left: 1%;
+    border-radius: 15px;
     height: calc(calc(100vh - var(--Header-Height)) - 18px);;
     top: calc(var(--Header-Height) + 6px);
 }

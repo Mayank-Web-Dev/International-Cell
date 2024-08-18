@@ -134,3 +134,24 @@ document.addEventListener('DOMContentLoaded', () => {
 function openLink() {
   window.open('https://forms.gle/7ovFb2JFMrGXJie39', '_blank');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(question => {
+      question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          const isOpen = answer.style.maxHeight;
+
+          // Close all answers
+          document.querySelectorAll('.faq-answer').forEach(answer => {
+              answer.style.maxHeight = null;
+          });
+
+          // Open the clicked answer if it was not already open
+          if (!isOpen) {
+              answer.style.maxHeight = answer.scrollHeight + 'px';
+          } 
+      });
+  });
+});
