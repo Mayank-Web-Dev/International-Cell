@@ -1,22 +1,3 @@
-
-const splitTypes = document.querySelectorAll(".AnimateType")
-splitTypes.forEach((words,i) => {
-    const text = new SplitType(words, {types: 'words'})
-    gsap.from(text.words, {
-        scrollTrigger: {
-            trigger:words,
-            start:'top 100%',
-            end:'top 80%',
-            scrub:true,
-            marker:false,
-        },
-        y:100,
-        opacity:0,
-        stagger:1,
-        duration: 1 ,
-    });
-});
-
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
