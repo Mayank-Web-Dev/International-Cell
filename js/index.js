@@ -30,23 +30,15 @@ function NavButtonAnimator() {
         const Video = document.getElementsByClassName("VideoContainer")[0].clientHeight;
         const Data = document.getElementsByClassName("Data")[0].clientHeight;
         const Highlights = document.getElementsByClassName("HighlightsContainer")[0].clientHeight;
-        const Gallery = document.getElementsByClassName("Gallery")[0].clientHeight;
         if (window.scrollY > (Header - ScreenHeight / 2) && window.scrollY < (Header + Video - ScreenHeight / 2)) {
             document.getElementsByClassName("NavButton")[0].classList.remove("NavButton-hover");
             document.getElementsByClassName("NavButton")[1].classList.remove("NavButton-hover");
-            document.getElementsByClassName("NavButton")[2].classList.remove("NavButton-hover");
         } else if (window.scrollY > (Header + Video - ScreenHeight / 2) && window.scrollY < (Header + Video + Data - ScreenHeight / 2)) {
             document.getElementsByClassName("NavButton")[0].classList.add("NavButton-hover");
             document.getElementsByClassName("NavButton")[1].classList.remove("NavButton-hover");
-            document.getElementsByClassName("NavButton")[2].classList.remove("NavButton-hover");
         } else if (window.scrollY > (Header + Video + Data - ScreenHeight / 2) && window.scrollY < (Header + Video + Data + Highlights - ScreenHeight / 2)) {
             document.getElementsByClassName("NavButton")[0].classList.remove("NavButton-hover");
             document.getElementsByClassName("NavButton")[1].classList.add("NavButton-hover");
-            document.getElementsByClassName("NavButton")[2].classList.remove("NavButton-hover");
-        } else if (window.scrollY > (Header + Video + Data + Highlights - ScreenHeight / 2) && window.scrollY < (Header + Video + Data + Highlights + Gallery - ScreenHeight / 2)) {
-            document.getElementsByClassName("NavButton")[0].classList.remove("NavButton-hover");
-            document.getElementsByClassName("NavButton")[1].classList.remove("NavButton-hover");
-            document.getElementsByClassName("NavButton")[2].classList.add("NavButton-hover");
         }
     });
 }

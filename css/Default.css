@@ -96,7 +96,7 @@ html p {
   transition: all 0.5s ease;
 }
 
-.ButtonBox {
+.ButtonBox, .ButtonBoxAlt {
   z-index: 11;
   display: flex;
   background-color: #180161;
@@ -105,45 +105,30 @@ html p {
   border-radius: 7px;
   padding: 5px 10px;
   position: absolute;
-  top: 135px;
-  left: 3%;
-  transform: translate(-0%, -50%);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
-  width: 94%;
-  transition: all 0.5s ease;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-  text-wrap: nowrap;
-  flex-wrap: nowrap;
-  transition: all 0.5s ease;
-  font-family: 'Playfair Display';
-}
-
-.ButtonBoxAlt {
-  z-index: 11;
-  display: flex;
-  background-color: #180161;
-  overflow-x: auto;
-  scrollbar-width: none;
-  border-radius: 7px;
-  padding: 2px 5px;
-  position: absolute;
-  top: 50px;
-  left: calc(100vw - 800px);
   transform: translate(0%, -50%);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
   transition: all 0.5s ease;
-  width: 670px;
   text-align: center;
   align-items: center;
   justify-content: center;
   gap: 2px;
   text-wrap: nowrap;
   flex-wrap: nowrap;
-  transition: all 0.5s ease;
   font-family: 'Playfair Display';
+  height: 45px;
+}
+
+.ButtonBox {
+  top: 135px;
+  right: 2%;
+  width: 94%;
+}
+
+.ButtonBoxAlt {
+  top: 50px;
+  right: 20px;
+  width: 700px;
+  padding: 2px 5px;
 }
 
 .SocialsLogo {
@@ -403,31 +388,25 @@ html p {
 
 @media screen and (max-width: 800px) {
   .ButtonBox {
-      display: block;
+    display: block;
+    padding: 1px 5px;
     }
   
     .ButtonBoxAlt {
-      z-index: 11;
       display: block;
-      background-color: #1650a8;
       overflow: auto;
       scrollbar-width: none;
-      border-radius: 7px;
-      padding: 5px 10px;
       position: absolute;
-      top: calc(100dvh - 50px);
+      top: calc(100dvh - 30px);
       left: 50%;
       transform: translate(-50%, -50%);
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
-      width: 94%;
+      width: 96%;
       transition: all 0.5s ease;
       text-align: center;
       align-items: center;
       justify-content: center;
       gap: 2px;
-      text-wrap: nowrap;
-      flex-wrap: nowrap;
-      transition: all 0.5s ease;
+      padding: 1px 5px;
     }
   
   .Footer {
