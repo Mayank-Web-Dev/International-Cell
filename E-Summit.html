@@ -9,6 +9,27 @@
         <link rel="stylesheet" href="css/Default.css">
         <link rel="stylesheet" href="css/E-Summit.css">
     </head>
+    <style>
+            .Poster {
+                padding: 0px;
+                gap:3px;
+            }
+            .Poster img {
+                border-radius: 9px;
+            }
+        @media (min-width: 800px) {
+            .Poster {
+                padding: 10px;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+            }
+            .Poster img {
+                width: 45dvw;
+                border-radius: 9px;
+            }
+        }
+        </style>
 <body>
     <header class="HeaderMain">
         <div class="Cont">
@@ -50,11 +71,9 @@
             </div>
         </div>
     </div>
-    <div class="TrackContainer" style="padding: 0px;">
+    <div class="TrackContainer Poster">
         <img src="./assets/Poster1.png">
-    </div>
-    <div class="TrackContainer" style="padding: 0px;">
-        <img src="./assets/Poster2.png" >
+        <img src="./assets/Poster2.png">
     </div>
     <div class="TrackContainer">
         <div class="HeadingHolder">
