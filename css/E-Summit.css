@@ -237,7 +237,7 @@
 
 .ParaHolder p {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateY(-50px);
     /* Initially, no animation applied */
 }
 
@@ -256,11 +256,11 @@
 @keyframes sweepFadeIn {
     from {
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateY(-50px);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 

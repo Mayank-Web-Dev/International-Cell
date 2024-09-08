@@ -89,6 +89,7 @@ document.getElementById('goButton').addEventListener('click', function() {
       'about-us': 'index.html#AboutUs',
       'highlights': 'index.html#Highlights',
       'gallery': 'index.html#Gallery',
+      'workshops': 'Workshops.html',
       'e-summit': 'E-summit.html',
       'contact-us': 'ContactUs.html',
       'about-christ-ncr': 'http://ncr.christuniversity.in'
