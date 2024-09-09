@@ -21,7 +21,6 @@
   
   .VideoContainer video {
     display: flex;
-    object-fit: cover;
     position: relative;
     top: 200px;
     height: 1px;
